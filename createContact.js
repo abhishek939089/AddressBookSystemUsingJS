@@ -69,8 +69,7 @@ function contactDetails(
     const zipCodePattern = /^[0-9]{6}/;
     let zipCode_Check = zipCodePattern.test(zipCode);
 
-    const emailPattern =
-      /^[A-Za-z0-9]+(.[A-Za-z0-9]+)@[^\\W]+(.[^\\W]+)?(?=(.[^_\\W]{3,}$|.[a-zA-Z]{2}$)).$/;
+    const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
     let email_Check = emailPattern.test(email);
 
     const phoneNumberPattern = /^[0-9]{10}/;
@@ -104,3 +103,16 @@ function contactDetails(
     }
   }
 }
+
+//UC3
+contactDetails(
+  "Abhishek",
+  "Sharma",
+  "Home",
+  "Uttar Pradesh",
+  "Mathura",
+  "281406",
+  "abhishek@gmail.com",
+  "3345452525"
+);
+console.log(addressBook);
