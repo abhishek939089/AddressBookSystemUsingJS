@@ -172,3 +172,14 @@ function deleteContact(first_Name) {
     }
   }
 }
+
+//UC 6
+
+//creating a function to calculate number of contacts in addressbook using reduce() method
+function numberOfContacts() {
+  return addressBook.reduce((total) => total + 1, 0);
+}
+
+console.log(
+  "Total number of contacts inside address book is : " + numberOfContacts()
+);
