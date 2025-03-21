@@ -262,3 +262,20 @@ function countContactInCity_State(choice, name) {
     console.log("Provide Right City or State Name");
   }
 }
+
+//UC 11
+
+//sorting contacts by name
+function sortContact(choice) {
+  console.log(
+    addressBook.sort((newContact1, newContact2) => {
+      if (newContact1.firstName < newContact2.firstName) {
+        return -1;
+      } else if (newContact1.firstName == newContact2.firstName) {
+        return 0;
+      } else {
+        return 1;
+      }
+    })
+  );
+}
