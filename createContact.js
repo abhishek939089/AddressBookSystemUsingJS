@@ -279,3 +279,37 @@ function sortContact(choice) {
     })
   );
 }
+
+//UC 12
+
+//sorting
+function sortContact(choice) {
+  console.log(
+    addressBook.sort((newContact1, newContact2) => {
+      switch (choice) {
+        case "city":
+          one = newContact1.city;
+          two = newContact2.city;
+          break;
+        case "state":
+          one = newContact1.state;
+          two = newContact2.state;
+          break;
+        case "zipCode":
+          one = newContact1.zipCode;
+          two = newContact2.zipCode;
+          break;
+        default:
+          console.log("Provide Valid Input city or state or zipCode");
+      }
+
+      if (one < two) {
+        return -1;
+      } else if (one == two) {
+        return 0;
+      } else {
+        return 1;
+      }
+    })
+  );
+}
